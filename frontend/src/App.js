@@ -4,7 +4,7 @@ import axios from 'axios'
 
 // BASE URL (backend)
 const api = axios.create({
-  baseURL: "http://192.168.1.105:8000/api/"
+  baseURL: "http://192.168.1.22:8080/api/"
 })
 
 class App extends Component{

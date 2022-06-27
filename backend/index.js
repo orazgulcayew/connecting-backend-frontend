@@ -26,9 +26,6 @@ app.get("/api/test", async (req, res) => {
 
 app.use("/api", taskRoute);
 
-app.listen(8000, "192.168.1.105", () => {
-    console.log("Backend server running!");
-})
-app.listen(8000, () => {
+app.listen(8080, "192.168.1.22", () => {
     console.log("Backend server running!");
 })
