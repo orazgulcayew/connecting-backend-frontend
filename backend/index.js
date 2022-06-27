@@ -2,7 +2,9 @@ const express = require("express")
 const app = express();
 const mongoose = require("mongoose")
 const dotenv = require("dotenv")
+const cors = require("cors")
 const taskRoute = require("./routes/task")
+
 
 dotenv.config();
 
@@ -14,6 +16,9 @@ mongoose.connect(process.env.MONGO_URL)
 
 app.use(express.json())
 
+app.use(cors())
+app.options("*", cors())
+
 // Testing route
 app.get("/api/test", async (req, res) => {
     res.status(200).send("Test succesfully made!");
@@ -21,6 +26,9 @@ app.get("/api/test", async (req, res) => {
 
 app.use("/api", taskRoute);
 
+app.listen(8000, "192.168.1.105", () => {
+    console.log("Backend server running!");
+})
 app.listen(8000, () => {
     console.log("Backend server running!");
 })
