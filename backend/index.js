@@ -5,6 +5,9 @@ const dotenv = require("dotenv")
 const cors = require("cors")
 const taskRoute = require("./routes/task")
 
+// CHANGE URL TO localhost or Your network url
+// if localhost not works then change it to 127.0.0.1
+const serverUrl = "192.168.1.22"
 
 dotenv.config();
 
@@ -26,6 +29,6 @@ app.get("/api/test", async (req, res) => {
 
 app.use("/api", taskRoute);
 
-app.listen(8080, "192.168.1.22", () => {
+app.listen(8080, serverUrl, () => {
     console.log("Backend server running!");
 })

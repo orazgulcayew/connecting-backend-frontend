@@ -2,9 +2,12 @@ import './App.css';
 import React, {Component} from 'react';
 import axios from 'axios'
 
+// CHANGE TO YOUR BACKEND URL
+const backendUrl = "http://192.168.1.22:8080/api/"
+
 // BASE URL (backend)
 const api = axios.create({
-  baseURL: "http://192.168.1.22:8080/api/"
+  baseURL: backendUrl
 })
 
 class App extends Component{
