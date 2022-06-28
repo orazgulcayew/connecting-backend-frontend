@@ -45,7 +45,7 @@ class App extends Component{
   handleSubmit = (event) => {
     event.preventDefault()
     const title = event.target.elements.taskTitle.value
-    const text = event.target.taskTitle.value
+    const text = event.target.elements.taskText.value
 
     // Call setTask for saving to backend
     this.setTask(title, text)

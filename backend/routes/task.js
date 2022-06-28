@@ -14,7 +14,7 @@ router.get("/tasks", async (req, res) => {
 });
 
 
-// POST Creating new task
+// Creating new task
 router.post("/task", async (req, res) => {
     const task = new Task({
         text: req.body.text,
